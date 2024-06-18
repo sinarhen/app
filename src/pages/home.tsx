@@ -3,7 +3,7 @@ import Layout from "../components/layout";
 import QuoteCard from "../components/quote-card";
 import { quotesExamples } from "../config/test";
 
-const HomePage = () => (
+const HomePage = async () => (
       <Layout title="Quotage | Home Page">
         <>
           <div class="min-h-full w-[30%] relative">
@@ -18,9 +18,7 @@ const HomePage = () => (
           <div id="quotes" class="w-[70%] grid gap-x-1 gap-y-1 px-24 py-2 md:grid-cols-2">
             {quotesExamples.map(quoteExample => <QuoteCard {...quoteExample} />)}
           </div>
-      
         </>
-      
       </Layout> 
     )
 export default HomePage;
